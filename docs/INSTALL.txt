@@ -1,0 +1,18 @@
+Mac Input Guard 0.1.0-alpha.1
+
+Drag MacInputGuard.app into Applications. Open it and set your own password.
+Grant Accessibility in System Settings yourself, then complete the 12-second
+physical-input and automation compatibility review on your own Mac.
+
+Shortcut: Control + Option + Command + L.
+Login startup is optional and never automatically enables protection.
+
+This alpha may be ad-hoc signed and not notarized. Gatekeeper may block an
+internet-downloaded development build. Do not disable Gatekeeper or remove
+quarantine with a script. Build from reviewed source or wait for a notarized
+release if the downloaded build cannot be opened safely.
+
+This is a convenience input filter, not a secure macOS lock. Content remains
+visible. Reboot, administrators and other injection tools may bypass it.
+Unlock and quit before uninstalling. Use the source project's uninstall script
+or disable login startup in the app before moving it to Trash.

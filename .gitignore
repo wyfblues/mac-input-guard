@@ -1,0 +1,11 @@
+.DS_Store
+.build/
+dist/
+*.local
+.env*
+!*.example
+*.p12
+*.p8
+*.mobileprovision
+*.keychain*
+verification.local.json
