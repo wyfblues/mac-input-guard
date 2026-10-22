@@ -4,6 +4,8 @@
 
 `scripts/build.sh` builds both CPU architectures by default and signs with an ad-hoc identity. `scripts/package.sh --skip-build` creates a DMG, an app ZIP, a source ZIP, and `SHA256SUMS.txt` under `dist/`. It does not publish or upload anything.
 
+The public repository currently distributes source only. CI builds and tests the code, without uploading development app artifacts. Prebuilt public binaries remain pending Developer ID signing, notarization, and release acceptance.
+
 Development artifacts are usable for source review and local evaluation. They are not a claim of Gatekeeper acceptance or Apple notarization. A download can be quarantined and blocked. Never ship scripts that disable Gatekeeper or strip quarantine to hide this distinction.
 
 ## Developer ID and notarization

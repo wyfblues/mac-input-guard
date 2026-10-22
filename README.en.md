@@ -4,6 +4,8 @@ A small macOS menu bar app that limits casual physical keyboard, mouse, and trac
 
 Version **0.1.0-alpha.1** is an early preview. The current UI is Chinese. See the [Chinese guide](README.md) for detailed setup.
 
+Only source code is published at this stage. Prebuilt apps will follow Developer ID signing, notarization, and release acceptance. CI builds and tests the source without uploading development installers.
+
 ## Features
 
 - Manual protection with **Control + Option + Command + L** and an independent password.
