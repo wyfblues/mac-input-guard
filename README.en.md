@@ -2,6 +2,8 @@
 
 **[English](README.en.md) | [简体中文](README.md#简体中文)**
 
+<img src="resources/AppIcon.png" width="128" alt="Mac Input Guard retro pixel monitor and padlock icon">
+
 Keep AI working on your Mac while limiting casual physical keyboard, mouse, and trackpad input.
 
 Mac Input Guard is a small macOS menu bar app. Your desktop remains visible. When you step away, press **Control + Option + Command + L** to enable input protection; use your independent protection password to unlock it when you return. Optional login startup stays idle in the background and never enables protection automatically.
@@ -33,6 +35,10 @@ For now, build from source using the commands below, then run `./scripts/install
 Click **结束测试** (End test) to stop a preview early. An early stop does not satisfy the full 12-second automatic-recovery check. The app will not report regular protection as successful when permissions are missing, the compatibility review is incomplete, or filter health has failed.
 
 The app does not prevent sleep or change system sleep, auto-lock, or password policies.
+
+The retro pixel icon is included in the application bundle for Finder and the Dock.
+The installer replaces the complete app and refreshes macOS application registration
+when updating. See [icon artwork and regeneration](resources/README.md).
 
 ## Build and test
 

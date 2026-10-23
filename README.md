@@ -2,6 +2,8 @@
 
 **[English](#english) | [简体中文](#简体中文)**
 
+<img src="resources/AppIcon.png" width="128" alt="Mac Input Guard retro pixel monitor and padlock icon">
+
 Keep AI working on your Mac while limiting casual physical input.
 
 让 AI 继续操作 Mac，同时限制身边的人使用实体键盘、鼠标和触控板。
@@ -39,6 +41,10 @@ For now, build from source using the commands below, then run `./scripts/install
 Click **结束测试** (End test) to stop a preview early. An early stop does not satisfy the full 12-second automatic-recovery check. The app will not report regular protection as successful when permissions are missing, the compatibility review is incomplete, or filter health has failed.
 
 The app does not prevent sleep or change system sleep, auto-lock, or password policies.
+
+The retro pixel icon is included in the application bundle for Finder and the Dock.
+The installer replaces the complete app and refreshes macOS application registration
+when updating. See [icon artwork and regeneration](resources/README.md).
 
 ### Build and test
 
@@ -125,6 +131,9 @@ Distinguishing physical trackpad events from automation depends on the OS, hardw
 短按“结束测试”可提前结束预览；提前结束不会满足“完整 12 秒自动恢复”检查。缺少权限、兼容性检查未完成或检测到过滤器失效时，程序不会报告正式保护成功。
 
 本工具不附带防休眠功能，也不改变系统休眠、自动锁屏或密码策略。
+
+复古像素图标已写入应用包，供 Finder 和 Dock 使用；安装脚本更新时替换完整应用包，
+并刷新 macOS 应用注册信息。图标原图和重新生成方法见 [图标说明](resources/README.md)。
 
 ### 构建和测试
 

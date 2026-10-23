@@ -5,6 +5,9 @@ task_arch="${1:-universal}"
 case "$task_arch" in arm64|x86_64|universal) ;; *) print -u2 'Usage: build.sh [arm64|x86_64|universal]'; exit 2 ;; esac
 task_build="$task_root/.build"
 task_app="$task_root/dist/MacInputGuard.app"
+if [[ ! -f "$task_root/resources/AppIcon.icns" ]]; then
+  print -u2 'Missing resources/AppIcon.icns. Regenerate it using scripts/make-icon.swift.'; exit 1
+fi
 mkdir -p "$task_build" "$task_root/dist"
 if ! mkdir "$task_build/build.lock" 2>/dev/null; then
   print -u2 'Another build is active. Wait for it to finish.'; exit 1
@@ -40,9 +43,7 @@ info={'CFBundleExecutable':'MacInputGuard','CFBundleIdentifier':'org.macinputgua
  'CFBundleURLTypes':[{'CFBundleURLName':'org.macinputguard.app','CFBundleURLSchemes':['macinputguard']}]}
 (app/'Contents/Info.plist').write_bytes(plistlib.dumps(info))
 PY
-if [[ -f "$task_root/resources/AppIcon.icns" ]]; then
-  cp "$task_root/resources/AppIcon.icns" "$task_app/Contents/Resources/"
-fi
+cp "$task_root/resources/AppIcon.icns" "$task_app/Contents/Resources/"
 task_signing="${SIGNING_IDENTITY:--}"
 if [[ "$task_signing" == - ]]; then
   /usr/bin/codesign --force --options runtime --sign - "$task_app"
